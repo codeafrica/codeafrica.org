@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CodeAfrica - GitHub Africa Users</title>
+    <link rel="stylesheet" href="map.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+</head>
+<body class="left">
+    <div id='header'>
+        <h1>GitHub Africa Users &nbsp; <i class="icon-github-alt"></i></h1>
+    </div>
+    <div id="about">
+
+        <a href="#test-popup" class="open-popup-link button button-flat">About &nbsp;<i class="icon-question-sign"></i></a>
+
+    </div>
+
+    <div id="test-popup" class="white-popup mfp-hide">
+        <h2>GitHub Users in Africa &nbsp;<i class="icon-github-alt"></i></h2>
+        <p>This map represents all <a href="http://github.com">GitHub</a> users as of <b>March 15, 2013</b> who had their profile location in GitHub set to either an African country or city. </p>
+        <p>Since this ONLY counts users who set their location, this represents a best attempt to show where and to what degree GitHub is being adopted.</p>
+        <p>If you are a GitHub user living in Africa, please update your location to be counted in future versions of this map.</p>
+        <p>This is an initiative of the <a href="http://codeafrica.org">CodeAfrica</a> project which seeks to grow, promote and highlight coders in Africa.</p>
+        <p>This map was made by <a href="http://www.twitter.comylmbko">Renaud Gaudin</a> (data) and <a href="http://twitter.com/mberg">Matt Berg</a> (map design).</p>
+
+
+    </div>
+
+    <!--</div>-->
+    <!--</div>-->
+    <div id="map" class="map"></div>
+    <a href="http://codeafrica.org" target="_blank">
+        Powered by CodeAfrica
+    </a>
+
+    <!--<div id="content">-->
+        <!--<div class="limiter">-->
+        <!--It would be great if <a href="http://codeafrica.org">this</a> works!-->
+
+
+    <div id="search">
+       <form class="geocode">
+         <input placeholder='Enter city or country' type="text">
+         <input type='submit' />
+         <div id='geocode-error'></div>
+       </form>
+    </div>
+
+    <!-- External libraries and site script -->
+    <script src="ext/jquery.min.js"></script>
+    <script src="ext/underscore.min.js"></script>
+    <script src="ext/modestmaps.min.js"></script>
+    <script src="ext/wax/wax.mm.js"></script>
+    <script src="ext/wax/wax.ext.js"></script>
+    <script src="ext/easey.js"></script>
+    <script src="ext/easey.handlers.js"></script>
+    <script src="ext/mmg.js"></script>
+    <script src="script.js"></script>
+    <script src="foursquare.js"></script>
+    <script src="ext/jquery.magnific-popup.min.js"></script>
+
+
+    <script type="text/javascript">
+    $('.open-popup-link').magnificPopup({
+    type:'inline',
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
+    </script>
+
+    <script type="text/javascript">
+
+        $('#btn').click(function(e){
+            $('#fancy, #btn').fadeOut('slow', function(){
+                $('#bank, #btn-bk').fadeIn('slow');
+            });
+        });
+
+        $('#btn-bk').click(function(e){
+            $('#bank, #btn-bk').fadeOut('slow', function(){
+                $('#btn').fadeIn('slow');
+            });
+        });
+
+
+
+    </script>
+
+    <!-- Site configuration -->
+    <script type="text/javascript">
+
+        // Set up the foursquare API
+        foursquare.settings = {
+            /* foursquare API keys. See: https://foursquare.com/oauth/register */
+            client_id: '1SHOHFLYHC3KIQKMBMKRWHASORK0TPCNPPH04OQCT1Y5ZRGW',
+            client_secret: '2DMK0XSZL3ZMZDNR0G0UQ4ARJYN2HIJXL4FKXZ1WUALXZYZV',
+            /* List ID. See: https://developer.foursquare.com/docs/explore#req=users/self/lists */
+            list: '4fc674d7e4b07a1f71542757',
+            /* Search radius for nearby address matches */
+            radius: 8046.72 // 5 miles in meters
+        };
+
+        // Make a new map in #map
+        var main = Map('map', {
+            api: 'http://a.tiles.mapbox.com/v3/modilabs.map-vyrmspsz.jsonp',
+            center: {
+                lat: 6,
+                lon: 12,
+                zoom: 4
+            },
+            zoomRange: [3, 8],
+            features: [
+                'zoomwheel',
+                'zoombox',
+                'zoompan',
+            ]
+        }, foursquare.start);
+
+
+
+    </script>
+</body>
+</html>
