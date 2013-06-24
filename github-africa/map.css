@@ -255,28 +255,9 @@
   -webkit-box-shadow:#fff 0px 0px 40px;
   }
 
-.ts-error .mapbox-logo {
-  display:block;
-  width:140px;
-  height:40px;
-  margin:5px auto;
-  background:url(/assets/tilestream-pro/images/controls.png) 0px -40px no-repeat;
-  }
 
- .mapbox-watermark {
-  position:absolute;
-  left:5px;
-  bottom:5px;
-  z-index:99999;
-  display:block;
-  width:65px;
-  height:20px;
-  text-indent:-9999px;
-  overflow:hidden;
-  background:url(/assets/tilestream-pro/images/controls.png) 0px -90px no-repeat;
-  }
 
-.attribution .mapbox-watermark { bottom:25px; }
+
 
 /* Override image location */
  .zoomer,

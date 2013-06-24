@@ -141,7 +141,7 @@ body > div {
     position: absolute;
     bottom: 5px;
     left: 5px;
-    height: 20px;
+    height: 10px;
     padding: 5px;
     color: #ffffff;
     font-size: 10px;
@@ -265,7 +265,7 @@ form.geocode.loading input[type=submit] {
 .wax-attribution {
   background: url(img/map_rev.png) no-repeat 0px -90px;
   color: rgb(37, 53, 61);
-  padding-left: 75px;
+  padding-left: 0px;
   padding-top: 2px;
   opacity: .5;
   }
@@ -445,7 +445,7 @@ form.geocode.loading input[type=submit] {
   border-left:none;
   }
 .left .wax-attribution {
-  left: 380px;
+  left: 0px;
   bottom: 2px;
   }
 .left a.zoomin {
