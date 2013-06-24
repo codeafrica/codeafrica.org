@@ -136,6 +136,21 @@ body > div {
 }
 
 
+#attribution-mapbox {
+    background: rgba(0, 0, 0, 0.50);
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    height: 20px;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 10px;
+
+}
+#attribution-mapbox a {
+ color: #ffffff;
+}
+
 #bank {display:none;}
 #btn-bk {display:none;}
 
