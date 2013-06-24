@@ -4,7 +4,8 @@
     <list default="true" id="b3ad8e72-b1e7-466b-ad5f-233392fcece9" name="Default" comment="" />
     <ignored path="github-africa.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="b3ad8e72-b1e7-466b-ad5f-233392fcece9" time="1372025230383" ignored="false" />
+    <file path="/index.html" changelist="b3ad8e72-b1e7-466b-ad5f-233392fcece9" time="1372060485062" ignored="false" />
+    <file path="/style.css" changelist="b3ad8e72-b1e7-466b-ad5f-233392fcece9" time="1372058551604" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,34 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="10" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.7184325">
+            <state line="44" column="104" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.60993975">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="font-awesome.min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/font-awesome.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="132" selection-start="2748" selection-end="2748" vertical-scroll-proportion="-22.04">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/map.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="5" selection-start="367" selection-end="370" vertical-scroll-proportion="-9.32">
               <folding />
             </state>
           </provider>
@@ -43,6 +71,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -97,6 +126,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github-africa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github-africa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github-africa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="github-africa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -108,6 +165,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
+    </key>
   </component>
   <component name="RunManager">
     <list size="0" />
@@ -204,9 +266,30 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/map.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="367" selection-end="370" vertical-scroll-proportion="-9.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font-awesome.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="132" selection-start="2748" selection-end="2748" vertical-scroll-proportion="-22.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="10" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.7184325">
+        <state line="44" column="104" selection-start="2048" selection-end="2048" vertical-scroll-proportion="0.60993975">
           <folding />
         </state>
       </provider>
