@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="GithubAfrica">
 <head>
     <meta charset="UTF-8" />
     <title>CodeAfrica - GitHub Africa Users</title>
     <link rel="stylesheet" href="map.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="ext/nvd3/src/nv.d3.css" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
    <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -56,6 +57,10 @@
        </form>
     </div>
 
+    <div id="content" data-ng-controller="MainCtrl">
+        <svg nv-d3-chart bind="data" style="width: 100%; height: 100%;"></svg>
+    </div>
+
     <!-- External libraries and site script -->
     <script src="ext/jquery.min.js"></script>
     <script src="ext/underscore.min.js"></script>
@@ -68,13 +73,21 @@
     <script src="script.js"></script>
     <script src="foursquare.js"></script>
     <script src="ext/jquery.magnific-popup.min.js"></script>
-
+    <script type="text/javascript" src="ext/nvd3/lib/d3.v3.js"></script>
+    <script type="text/javascript" src="ext/nvd3/nv.d3.js"></script>
+    <script type="text/javascript" src="bamboo.js/lib/bamboo_api.js"></script>
+    <script type="text/javascript" src="ext/angular.min.js"></script>
+    <script type="text/javascript" src="angular-app/app.js"></script>
+    <script type="text/javascript" src="angular-app/controllers.js"></script>
+    <script type="text/javascript" src="angular-app/directives.js"></script>
+    <script type="text/javascript" src="angular-app/filters.js"></script>
+    <script type="text/javascript" src="angular-app/services.js"></script>
 
     <script type="text/javascript">
-    $('.open-popup-link').magnificPopup({
-    type:'inline',
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-    });
+        $('.open-popup-link').magnificPopup({
+            type:'inline',
+            midClick:true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+        });
     </script>
 
     <!-- Site configuration -->
@@ -83,24 +96,24 @@
         // Set up the foursquare API
         foursquare.settings = {
             /* foursquare API keys. See: https://foursquare.com/oauth/register */
-            client_id: '1SHOHFLYHC3KIQKMBMKRWHASORK0TPCNPPH04OQCT1Y5ZRGW',
-            client_secret: '2DMK0XSZL3ZMZDNR0G0UQ4ARJYN2HIJXL4FKXZ1WUALXZYZV',
+            client_id:'1SHOHFLYHC3KIQKMBMKRWHASORK0TPCNPPH04OQCT1Y5ZRGW',
+            client_secret:'2DMK0XSZL3ZMZDNR0G0UQ4ARJYN2HIJXL4FKXZ1WUALXZYZV',
             /* List ID. See: https://developer.foursquare.com/docs/explore#req=users/self/lists */
-            list: '4fc674d7e4b07a1f71542757',
+            list:'4fc674d7e4b07a1f71542757',
             /* Search radius for nearby address matches */
-            radius: 8046.72 // 5 miles in meters
+            radius:8046.72 // 5 miles in meters
         };
 
         // Make a new map in #map
         var main = Map('map', {
-            api: 'http://a.tiles.mapbox.com/v3/modilabs.map-vyrmspsz.jsonp',
-            center: {
-                lat: 6,
-                lon: 12,
-                zoom: 4
+            api:'http://a.tiles.mapbox.com/v3/modilabs.map-vyrmspsz.jsonp',
+            center:{
+                lat:6,
+                lon:12,
+                zoom:4
             },
-            zoomRange: [3, 8],
-            features: [
+            zoomRange:[3, 8],
+            features:[
                 'zoomwheel',
                 'zoombox',
                 'zoompan',
