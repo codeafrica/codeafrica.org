@@ -107,7 +107,7 @@ body > div {
   left: 20px;
   height: 20px;
   padding: 20px;
-  width:330px;
+  width:230px;
   color: #ffffff;
 }
 
@@ -140,7 +140,7 @@ body > div {
     background: rgba(0, 0, 0, 0.50);
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    left: 5px;
     height: 10px;
     padding: 5px;
     color: #ffffff;
@@ -159,7 +159,7 @@ body > div {
   top:60px;
   right:0;
   bottom:0;
-  width:70%;
+  width:330px;
   background:rgb(37, 53, 61);
   background:rgba(37, 53, 61, .75);
   overflow-x:hidden;
@@ -440,7 +440,7 @@ form.geocode.loading input[type=submit] {
   width:480px;
   }
 .left #content {
-  left:20px;
+  left:0;
   right:auto;
   border-left:none;
   }
@@ -677,8 +677,4 @@ a#showall {
     border-radius: 10px;
     background: rgba(0,0,0,.5);
     background: black;
-}
-
-#content svg {
-    z-index: 2;
 }
