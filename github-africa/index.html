@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="map.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-   <link rel="stylesheet" href="css/font-awesome.min.css">
-
-
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
 
@@ -19,6 +16,9 @@
 <body class="left">
     <div id='header'>
         <h1>GitHub Africa Users 2014 &nbsp; <i class="icon-github-alt"></i></h1>
+    </div>
+    <div id='github-users'>
+        <h1>12,329 GitHub Users in Africa</h1> As of January 1st, 2015
     </div>
     <div id="about">
 
@@ -28,12 +28,27 @@
 
     <div id="test-popup" class="white-popup mfp-hide">
         <h2>GitHub Users in Africa &nbsp;<i class="icon-github-alt"></i></h2>
-        <p>This map represents all <a href="http://github.com">GitHub</a> users as of <b>December 31st, 2014</b> who had their profile location in GitHub set to either an African country or city. </p>
+        <p>This map represents all <a href="http://github.com">GitHub</a> users as of <b>Jan 1st, 2015</b> who had their profile location in GitHub set to either an African country or city. </p>
         <p>Since this ONLY counts users who set their location, this represents a best attempt to show where and to what degree GitHub is being adopted.</p>
         <p>If you are a GitHub user living in Africa, please update your location to be counted in future versions of this map.</p>
         <p>This is an initiative of the <a href="http://codeafrica.org">CodeAfrica</a> project which seeks to grow, promote and highlight coders in Africa.</p>
         <p>This map was made by <a href="http://company.ona.io">Ona</a> and <a href="http://yeleman.com">Yeleman</a> - two companies creating world class open source software in Nairobi, Kenya and Bamako, Mali.</p>
 
+
+    </div>
+
+
+        <div id="chart-button">
+
+        <a href="#chart-popup" class="open-popup-link button button-flat">Chart &nbsp;<i class="icon-bar-chart"></i></a>
+
+    </div>
+
+    <div id="chart-popup" class="chart-popup mfp-hide">
+        <center>
+       <div id="chart_div" ></div>
+   </center>
+<a href="https://github.com/codeafrica/github-africa/blob/master/data/github-africa-users-20141231-country.csv">View Source Data</a>
 
     </div>
 
@@ -43,23 +58,66 @@
     <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoib25hIiwiYSI6IlVYbkdyclkifQ.0Bz-QOOXZZK01dq4MuMImQ';
 var map = L.mapbox.map('map', 'ona.kl4pnpej', { zoomControl: false })
-    .setView([-4, 10.55], 4);
+    .setView([-4, 10.55], 3);
     new L.Control.Zoom({ position: 'bottomleft' }).addTo(map);
 
 </script>
 
     </a>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['corechart']}]}"></script>
+
+<script type="text/javascript">
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+              ['Country', 'GitHub Users'],
+              ['South Africa', 2697],
+              ['Egypt', 2135],
+              ['Kenya', 1397],
+              ['Nigeria', 1109],
+              ['Tunisia', 858],
+              ['Morocco', 851],
+              ['Ghana', 474],
+              ['Uganda', 399],
+              ['Algeria', 388],
+              ['Tanzania', 244],
+              ['Ethiopia', 175],
+              ['Mauritius', 140],
+              ['Senegal', 133],
+              ['Cameroon', 122],
+              ['Zimbabwe', 118],
+              ['Madagascar', 109],
+              ['Rwanda', 89],
+              ['Mozambique', 81],
+              ['Angola', 75],
+              ['Cote d\'Ivoire', 71],
+              ['Sudan', 67],
+              ['Zambia', 67],
+              ['Malawi', 52],
+              ['Benin', 51],
+              ['Botswana', 49]
+
+          ]);
+
+          var options = {
+              title: 'GitHub Usage Top African Countries',
+              width: 580,
+              height: 500,
+          };
+
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      }
+      </script>
+
     <div id="attribution-codeafrica">
         <a href="http://codeafrica.org">CodeAfrica</a> </> Initiative <b><i class="icon-rocket"></i></b>
     </div>   
 
     <!-- External libraries and site script -->
     <script src="ext/jquery.min.js"></script>
-    <script src="ext/underscore.min.js"></script>
-
-    <script src="ext/easey.js"></script>
-    <script src="ext/easey.handlers.js"></script>
-    <script src="ext/mmg.js"></script>
     <script src="script.js"></script>
     <script src="ext/jquery.magnific-popup.min.js"></script>
 

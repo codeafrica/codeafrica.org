@@ -99,6 +99,14 @@ body > div {
     color: #000;
     font-size: 14px;
 }
+.chart-popup {
+    position: relative;
+    background: #FFF;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    
+}
 
 #header {
   background: rgba(65, 131, 196, 0.75);
@@ -111,6 +119,18 @@ body > div {
   color: #ffffff;
 }
 
+#github-users {
+
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+
+  padding: 20px;
+
+  color: #fff;
+}
+
+
 #about {
     position: absolute;
     bottom: 0px;
@@ -120,6 +140,17 @@ body > div {
     padding: 10px;
 
 }
+#chart-button {
+    position: absolute;
+    bottom: 0px;
+    top: 5px;
+    right: 115px;
+    height: 5px;
+    padding: 10px;
+
+}
+
+
 
 #attribution-codeafrica {
     background: rgba(0, 0, 0, 0.50);
