@@ -107,14 +107,14 @@ body > div {
   left: 20px;
   height: 20px;
   padding: 20px;
-  width:230px;
+  width:280px;
   color: #ffffff;
 }
 
 #about {
     position: absolute;
     bottom: 0px;
-    top: 40px;
+    top: 5px;
     right: 0px;
     height: 45px;
     padding: 10px;
